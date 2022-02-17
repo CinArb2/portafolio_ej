@@ -4,12 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Portfolio || Cindy A.</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./íconos/icons8-dating-website-50.png">
 </head>
 <body>
+  <header>
+    <button class="boton">
+      <img class="menu hamb" src="./íconos/icons8-menu (1).svg" alt="">
+      <img class="menu close" src="./íconos/icons8-close (1).svg" alt="">
+    </button>
+    <nav>
+      <ul class="nav_items">
+        <li class="nav_item"><a href="#hero">Home</a></li> 
+        <li class="nav_item"> <a href="#servicios">Servicios</a> </li>
+        <li class="nav_item"> <a href="#about">Acerca de mi</a> </li>
+        <li class="nav_item"> <a href="#habilidades">Mis habilidades</a> </li>
+        <li class="nav_item"> <a href="#portafolio">Mi portafolio</a> </li>
+        <li class="nav_item"> <a href="#contacto">Contacto</a> </li>
+      </ul>
+    </nav>
+    
+  </header>
   <main>
-    <section class="hero">
+    <section id="hero">
       <div class="container_texto-hero">
         <div class="hero_text-izq">
           <span class="hero_texto-Big">Soy</span>
@@ -41,7 +59,82 @@
         </div>
       </div>
     </section>
+    <section class="text-center" id="about">
+      <h2 class="hero_texto-md text_blue">Acerca de mi</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque assumenda voluptates culpa vero dignissimos non error porro corporis totam suscipit dolores soluta explicabo nisi recusandae quas accusamus nostrum accusantium alias ullam, ab commodi officiis. Deserunt magni obcaecati, ipsa veritatis dolorem expedita unde. Expedita enim quos voluptates non placeat tempore quod?</p>
+    </section>
+    <section class="text-center" id="servicios">
+      <h2 class="hero_texto-md text_blue">Servicios</h2>
+      <div class="container_servicios">
+        <div class="item">
+          <img src="./íconos/iconoir_design-pencil.svg" alt="">
+          <h3>UX/UI Design</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea.</p>
+        </div>
+        <div class="item">
+          <img src="./íconos/majesticons_speakerphone-line.svg" alt="">
+          <h3>Marketing</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea.</p>
+        </div>
+        <div class="item">
+          <img src="./íconos/feather_search.svg" alt="">
+          <h3>Research</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea.</p>
+        </div>
+      </div>
+    </section>
+    <section id="habilidades">
+      <h2 class="hero_texto-md text_blue text-center">Mis Habilidades</h2>
+
+      <div class="barras_container">
+        <div class="barra_caja">
+          <span>Web design</span>
+          <div class="barra">
+            <div class="barra_azul barra_85"></div>
+          </div>
+        </div>
+        <div class="barra_caja">
+          <span>Interaction Design</span>
+          <div class="barra">
+            <div class="barra_azul barra_95"></div>
+          </div>
+        </div>
+        <div class="barra_caja">
+          <span>UX</span>
+          <div class="barra">
+            <div class="barra_azul barra_80"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center" id="portafolio">
+      <h2 class="hero_texto-md text_blue" >Mi Portafolio</h2>
+      <div class="portafolio_container">
+        <img src="./Logos- Imágenes/Rectangle 65.jpg" alt="">
+        <img src="./Logos- Imágenes/image 4.jpg" alt="">
+        <img src="./Logos- Imágenes/Rectangle 53.jpg" alt="">
+      </div>
+    </section>
+    <section class="text-center" id="contacto">
+      <h2 class="hero_texto-md text_blue">Contacto</h2>
+      <div class="item telefono">
+        <img src="./íconos/phone 3.svg" alt="">
+        <span>Numero de telefono</span>
+        <p>5523652412</p>
+      </div>
+      <div class="item email">
+        <img src="./íconos/mail 3.svg" alt="">
+        <span>Email</span>
+        <p>ejemplo@gmail.com</p>
+      </div>
+    </section>
+    <footer>
+      <p class="text_blue">Hecho con ❤️  en Academlo</p>
+    </footer>
   </main>
-  </div>
+  <a href="#hero" class="scroll-up">
+    <img src="./íconos/icons8-scroll-up-50.png" alt="">
+  </a>
+  <script src="./main.js"></script>
 </body>
 </html>

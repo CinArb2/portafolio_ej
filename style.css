@@ -13,19 +13,14 @@ body,
 h1,
 h2,
 h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+/* Remove list styles on ul */
+ul {
   list-style: none;
+  padding-left: 0;
 }
 
 /* Set core root defaults */
@@ -43,9 +38,10 @@ body {
   color: white;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+/* A elements */
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /* Make images easier to work with */
@@ -57,10 +53,8 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+
+button {
   font: inherit;
 }
 
@@ -71,14 +65,24 @@ span{
 /****************Tipografia ****************/
 
 .hero_texto-Big{
-  font-size: clamp(1.2rem, 5vw, 2.5rem);
+  font-size: clamp(1.2rem, 5vw, 4rem);
+}
+
+.hero_texto-md{
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .hero_texto-xl{
-  font-size: clamp(3rem, 11vw, 80px);
+  font-size: clamp(3rem, 8vw, 100px);
   font-weight: 600;
   position: relative;
 }
+
+h2{
+  padding-bottom: 2rem;
+}
+
+/* Linea arriba del nombre */
 
 .hero_texto-xl::after{
   content: " ";
@@ -90,18 +94,82 @@ span{
   top: 5px;
 }
 
-.hero_texto-md{
-  font-size: clamp(1rem, 5vw, 1.5rem);
-}
-
 .text_blue{
   color: #34b0be;
 }
 
+.text-center{
+  text-align: center;
+}
+
+/**************** Header section *****************/
+
+header{
+  padding-inline: 1rem;
+  position: fixed;
+  width: 100%;
+  background-color: #242635;
+  z-index: 100;
+}
+
+.boton{
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+  background-color: #242635;
+}
+
+/**************** Navbar section *****************/
+
+nav{
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #242635;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 400ms ease;
+}
+
+.nav_items{
+  padding-block: min(20vh, 200px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.3rem;
+}
+
+.close{
+  display: none;
+}
+
+.visible .hamb{
+  display: none;
+}
+
+.visible .close{
+  display: block;
+}
+
+.visible{
+  transform: translateX(0); 
+}
+
+.overflow{
+  overflow: hidden;
+}
+
 /**************** Hero section *****************/
 
-.hero{
-  height: 60vh;
+#hero{
+  padding-block: 3rem;
 }
 
 .hero_text-izq{
@@ -112,19 +180,13 @@ span{
     transform: translate(10%, 5%);
 }
 
-@media screen and (min-width: 768px){
-  .hero_text-der{
-    transform: translate(-40%, 10%);
-  }
-}
-
 .container_texto-hero{
-  min-height: max(53vh, 440px);
-  padding: 12vh 2.5rem 1rem 1rem;
+  height: 430px;
+  padding: 45px 2.5rem 1rem 1rem;
   display: flex;
   gap: 5vw;
   justify-content: space-between;
-  max-width: 750px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -141,7 +203,7 @@ span{
 }
 
 .container_logos{
-  width: min(80%, 400px);
+  width: min(80%, 500px);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -153,7 +215,7 @@ span{
 }
 
 .container_img{
-  width: 30%;
+  width: 25%;
   background-color: white;
   border-radius: 10px;
   padding: 0.4rem;
@@ -171,7 +233,257 @@ span{
 
 .hero_foto-img{
   border-radius: 50%;
-  width: min(100%, 350px);
+  width: min(100%, 500px);
   margin: 0 auto;
 }
 
+/* ***************  about section ********************* */
+
+#about{
+  width: min(80%, 600px);
+  margin: 0 auto;
+  padding-block: 3rem;
+}
+
+/* ***************  servicios section ********************* */
+
+#servicios{
+  padding-block: 3rem;
+}
+
+.container_servicios{
+  width: min(80%, 700px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  overflow: auto;
+  gap: 20px;
+  padding: 1rem;
+}
+
+
+.item{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1rem;
+  background-image: url('./Vectores/Ellipse\ 14.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.item *{
+  padding-block: 0.3rem;
+}
+
+.item img{
+  margin: 0 auto;
+}
+
+.container_servicios::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container_servicios::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container_servicios::-webkit-scrollbar-thumb {
+    background-color: #aca9a6a8;
+    border-radius: 10px;
+}
+
+
+/* ***************  habilidades section ********************* */
+
+#habilidades{
+  padding-block: 3rem;
+}
+
+.barras_container{
+  width: min(80%, 1000px);
+  margin: 0 auto;
+}
+
+.barra_caja{
+  width: min(90%, 700px);
+  margin: 0 auto;
+  padding-block: 0.5rem;
+}
+
+.barra{
+  background-color: aliceblue;
+  height: 15px;
+  
+  border-radius: 7px;
+}
+
+.barra_azul{
+  height: 100%;
+  background-color: #34b0be;
+  border-radius: 7px;
+}
+
+.barra_85{
+  width: 85%;
+  position: relative;
+}
+
+.barra_85::after{
+  content: "85%";
+  position: absolute;
+  left: 97%;
+  top: -28px;
+  color: #34b0be;
+}
+
+.barra_95{
+  width: 95%;
+  position: relative;
+}
+
+.barra_95::after{
+  content: "95%";
+  position: absolute;
+  left: 97%;
+  top: -28px;
+  color: #34b0be;
+}
+
+.barra_80{
+  width: 80%;
+  position: relative;
+}
+
+.barra_80::after{
+  content: "80%";
+  position: absolute;
+  left: 97%;
+  top: -28px;
+  color: #34b0be;
+}
+
+/* ***************  Portafolio section ********************* */
+
+#portafolio{
+  padding-block: 3rem;
+}
+
+.portafolio_container{
+  display: flex;
+  overflow: auto;
+  gap: 20px;
+  padding: 1rem;
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+.portafolio_container img{
+  width: min(80%, 500px);
+}
+
+.portafolio_container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.portafolio_container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.portafolio_container::-webkit-scrollbar-thumb {
+    background-color: #aca9a6a8;
+    border-radius: 10px;
+}
+
+/* ***************  contacto section ********************* */
+
+#contacto{
+  margin: 0 auto;
+  width: min(90%, 600px);
+}
+
+#contacto > *{
+  margin-block: 2rem;
+}
+
+#contacto .item{
+  width: 200px;
+  padding-block: 3rem;
+}
+
+.item *{
+  padding-block: 0.3rem;
+}
+
+.item img{
+  margin: 0 auto;
+}
+
+.email{
+  margin-left: auto;
+}
+
+/* ***************  Footer section ********************* */
+
+footer{
+  min-height: 3rem;
+  background-color: #5c5b5a;
+  display: grid;
+  place-content: center;
+}
+
+
+.scroll-up{
+  position: fixed;
+  top: 0;
+  right: 10px;
+  transform: translateY(-100%) scale(0);
+  cursor: pointer;
+  transition: transform 400ms ease;
+}
+
+.translate{
+  transform: translateY(85vh) scale(1);
+}
+
+.scroll-up img{
+  width: 60px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px){
+  
+  .boton{
+    visibility: hidden;
+  }
+
+  nav{
+    padding: 0;
+    position: relative; 
+    height: fit-content;
+    transform: translateX(0);
+  }
+
+  .nav_items{
+  padding-block: 1rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 1rem;
+  }
+
+  .nav_item:hover a{
+    color: #34b0be;
+  }
+
+  .hero_text-der{
+    transform: translate(-5%, 6%);
+  }
+
+  .container_texto-hero{
+    height: 550px;
+  }
+
+}
