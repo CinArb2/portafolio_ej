@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #242635;
+  color: white;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+span{
+  display: block;
+}
+
+/****************Tipografia ****************/
+
+.hero_texto-Big{
+  font-size: clamp(1.2rem, 5vw, 2.5rem);
+}
+
+.hero_texto-xl{
+  font-size: clamp(3rem, 11vw, 80px);
+  font-weight: 600;
+  position: relative;
+}
+
+.hero_texto-xl::after{
+  content: " ";
+  width: 70%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.692);
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.hero_texto-md{
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.text_blue{
+  color: #34b0be;
+}
+
+/**************** Hero section *****************/
+
+.hero{
+  height: 60vh;
+}
+
+.hero_text-izq{
+  flex-basis: 100px;
+}
+
+.hero_text-der{
+    transform: translate(10%, 5%);
+}
+
+@media screen and (min-width: 768px){
+  .hero_text-der{
+    transform: translate(-40%, 10%);
+  }
+}
+
+.container_texto-hero{
+  min-height: max(53vh, 440px);
+  padding: 12vh 2.5rem 1rem 1rem;
+  display: flex;
+  gap: 5vw;
+  justify-content: space-between;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.container_img-redes{
+  padding-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.img_redes{
+  background-color: white;
+  padding:0.3rem;
+  border-radius: 50%;
+}
+
+.container_logos{
+  width: min(80%, 400px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  background-color: #5c5b5a;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.container_img{
+  width: 30%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.4rem;
+}
+
+.img_logo{
+  margin: 0 auto;
+  height: 40px;
+}
+.hero_foto{
+  position: absolute;
+  bottom: 50px;
+  z-index: -1;
+}
+
+.hero_foto-img{
+  border-radius: 50%;
+  width: min(100%, 350px);
+  margin: 0 auto;
+}
+
